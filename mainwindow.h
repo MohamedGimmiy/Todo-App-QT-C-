@@ -23,6 +23,7 @@ public slots:
     void addTask();
     void removeTask(Task* task);
     void taskStatusChanged(Task * task);
+    void resetAll();
 private:
     Ui::MainWindow *ui;
     QVector<Task*> mTasks;

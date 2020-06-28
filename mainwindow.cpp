@@ -20,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent)
     // 3- reciever object , 4- A pointer to one of the reciever's members solt functions
     connect(ui->addTaskButton, &QPushButton::clicked,
             this, &MainWindow::addTask );
+    connect(ui->Reset, &QPushButton::clicked, this, &MainWindow::resetAll);
+
     updateStatus();
 
 }
@@ -72,16 +74,24 @@ void MainWindow::addTask()
 }
 
 void MainWindow::removeTask(Task *task)
-{
+{   qDebug() << task->name();
     mTasks.removeOne(task); // remove it from the queue
     ui->tasksLayout->removeWidget(task); // remove it from the ui layout
-    task->setParent(0); // set the pointer to zero (null maybe)
+    task->setParent(nullptr); // set the pointer to zero (null maybe)
     delete task; // then safely delete it
 }
 
 void MainWindow::taskStatusChanged(Task *task)
 {
     updateStatus();
+}
+
+void MainWindow::resetAll()
+{   // BUG 1 if the number of tasks is more than 3 it can not be resetted correctly
+    qDebug() << "ResetAll fired";
+    for(auto  task : mTasks){
+        removeTask(task);
+    }
 }
 
 void MainWindow::updateStatus()

@@ -1,0 +1,5 @@
+1- Reset button // clear and delete all tasks
+2- tasks categories // categorizing our tasks with different colors
+3- Show completed tasks button  // displays all completed tasks
+4- show incompleted tasks // display all incompleted tasks
+5- show all / Hide

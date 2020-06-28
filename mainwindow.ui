@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>505</width>
-    <height>468</height>
+    <width>523</width>
+    <height>553</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,10 +20,13 @@
       <x>50</x>
       <y>120</y>
       <width>411</width>
-      <height>291</height>
+      <height>411</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="tasksLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <property name="sizeConstraint">
       <enum>QLayout::SetDefaultConstraint</enum>
      </property>
@@ -34,7 +37,7 @@
      <rect>
       <x>50</x>
       <y>30</y>
-      <width>411</width>
+      <width>434</width>
       <height>80</height>
      </rect>
     </property>
@@ -63,6 +66,20 @@
       <widget class="QPushButton" name="addTaskButton">
        <property name="text">
         <string>Add Task</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Reset">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>Show/hide</string>
        </property>
       </widget>
      </item>
